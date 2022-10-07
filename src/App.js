@@ -3,6 +3,7 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
+import About from "./pages/about/About";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
@@ -30,6 +31,15 @@ function App() {
               element={
                 <RequireAuth>
                   <Home />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="about"
+              index
+              element={
+                <RequireAuth>
+                  <About />
                 </RequireAuth>
               }
             />
